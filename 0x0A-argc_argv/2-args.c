@@ -1,19 +1,21 @@
-#include "holberton.h"
 #include <stdio.h>
-#define UNUSED(x) (void)(x)
-/**
- * main - main function
- * @argc: argumentc
- * @argv: vector of arguments
- *Return: always 0
- */
-int main(int argc, char  *argv[])
-{
-	int i;
 
-	for (i = 0; i < argc; i++)
+/**
+  * main - Prints all the arguments it receives one per line
+  * @argc: argument count
+  * @argv: array of arguments
+  *
+  * Return: Always 0
+  */
+
+int main(int argc, char **argv)
+{
+	int i = 0;
+
+	while (i < argc)
 	{
-		printf("%s\n", argv[i]);
+		printf("%s\n", *(argv + i));
+		i++;
 	}
 	return (0);
 }
